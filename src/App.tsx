@@ -49,10 +49,9 @@ function InteractiveModel({ url }) {
             }
           }}
         >
-          {scene.traverse((mesh) => {
-            {
-              /* {scene.children.map((mesh) => { */
-            }
+          {/* {scene.traverse((mesh) => { */}
+
+          {scene.children.map((mesh) => {
             console.log("Mesh:", mesh);
             if (mesh.isMesh) {
               // Set initial color if defined in meshColors
@@ -106,7 +105,7 @@ function InteractiveModel({ url }) {
 export default function App() {
   return (
     <div style={{ width: "100vw", height: "100vh" }}>
-      <InteractiveModel url="/currentModel.gltf" />
+      <InteractiveModel url="/tricou1-transformed.glb" />
     </div>
   );
 }
